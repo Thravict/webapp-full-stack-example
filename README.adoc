@@ -1,8 +1,18 @@
-# Webapp_Database
+= Webapp_Database
 
-### "Java Spring Boot"
+== Dokumentation
 
-#### Warum:
+Dies ist eine Dokumentation für die Projektarbeit Webapp_Database. 
+
+== Projektmitglieder (Contributors)
+
+Melanie Gille, Jakob Friedrich, Tobias Lux
+
+== Projektbeschreibung
+
+Java Spring Boot
+
+Warum:
 Unter Verwendung von Java kommt das Spring Boot Framework zum Einsatz.
 
 Dieses wird benutzt um einen Webserver (Apache Tomcat) out of the box mitgeliefert zu bekommen.

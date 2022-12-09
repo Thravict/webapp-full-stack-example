@@ -1,0 +1,23 @@
+= CHANGELOG 
+
+Alle auffälligen Veränderungen in diesem Projekt werden hier aufgezeichnet
+
+:version: xxx
+== link:{git-url-releases}{version}[{version}^] - 2022-xx-xx
+
+=== Added
+
+[horizontal]
+All:: ...
+
+=== Changed
+
+[horizontal]
+All::
+
+=== Deprecated
+
+[horizontal]
+All::
+
+=== Fixed
