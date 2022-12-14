@@ -1,0 +1,19 @@
+services:
+  nginx:
+    image:  nginx:latest
+    container_name:  webapp-nginx
+    restart: always
+    environment:
+      - TZ=Europe/Berlin
+    volumes:
+      - ./nginx/conf/webapp.conf:/etc/nginx/conf.d/webapp.conf
+    ports:
+      - 8080:8080
+    networks:
+      - nginx-net
+
+
+
+networks:
+  nginx-net:
+  db-net:
