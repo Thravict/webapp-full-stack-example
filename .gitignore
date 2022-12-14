@@ -23,4 +23,6 @@
 hs_err_pid*
 
 # documentation
-.adoc
+
+# ide settingsfiles
+.idea
