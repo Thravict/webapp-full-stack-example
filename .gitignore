@@ -25,4 +25,4 @@ hs_err_pid*
 # documentation
 
 # ide settingsfiles
-.idea
+/.idea/
