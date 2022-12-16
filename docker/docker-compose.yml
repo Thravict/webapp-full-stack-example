@@ -15,5 +15,5 @@ services:
 
 
 networks:
-  nginx-net:
-  db-net:
+  nginx-net: #Only Connection between Application and Nginx
+  db-net: #Only Connection between Application and Postgres
