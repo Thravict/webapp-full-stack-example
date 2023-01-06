@@ -1,0 +1,38 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: webapp-nginx
+    restart: always
+    environment:
+      - TZ=Europe/Berlin
+    volumes:
+      - ./nginx/conf/webapp.conf:/etc/nginx/conf.d/webapp.conf
+    ports:
+      - 8080:8080
+    networks:
+      - nginx-net
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    read_only: true
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - TZ=Europe/Berlin
+      - POSTGRES_USER=dumbo
+      - POSTGRES_PASSWORD=dumbo1234!
+      - POSTGRES_DB=user_management
+    #networks:
+      #- db-net:
+
+volumes:
+  postgresql_data:
+    driver: local
+
+networks:
+  nginx-net: #Only Connection between Application and Nginx
+  db-net: #Only Connection between Application and Postgres
