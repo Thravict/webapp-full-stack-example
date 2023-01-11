@@ -1,26 +1,28 @@
 import "./Login.css"
 
+
 function Login() {
     
 	return(
 	<html>
         <body>
-            <div className="Login-container">
-                <div className="Login-head">
-                    <h1>Login</h1>
-                </div>
-                <div className="Login-form">
-                    <div className="username-field">
-                        <input type="email" className="username" placeholder="example@gmail.com"></input>
-                    </div>
-                    <div className="password-field">
-                        <input type="password" className="password"></input>
-                    </div>
-                </div>
-                <div className="Login-btn">
-
-                </div>
+          <div className="Login-container">
+            <div className="Login-head">
+              <h1>Login</h1>
             </div>
+            <form action="#">
+            <div className="username">
+            <label>Email Address</label>
+            <input type="text"></input>
+            </div>
+            <div className="password">
+
+            </div>
+            <div className="Submit-btn">
+              <input type="submit" value="Submit"></input>
+            </div>
+            </form>
+          </div>
         </body>
     </html>
 )
