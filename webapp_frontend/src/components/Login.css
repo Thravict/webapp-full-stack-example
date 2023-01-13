@@ -51,7 +51,6 @@ font-family: 'Sofia Sans', sans-serif;
   margin-bottom: 8px;
 }
 .email-field{
-  margin-top: 0px;
   margin-left: 49px;
   width: 300px;
   height: 40px;
@@ -59,8 +58,15 @@ font-family: 'Sofia Sans', sans-serif;
   border-radius: 12px;
   font-size: 20px;
 }
-.email-field::content {
-  border-color: #666;
+input[type="email"]::-webkit-input-placeholder  {
+  -webkit-transition: opacity 0.1s linear; 
+  color: gray;
+}
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+input:focus {
+  outline: none;
 }
 .password {
   margin-top: 45px;
@@ -83,7 +89,6 @@ font-family: 'Sofia Sans', sans-serif;
   margin-bottom: 8px;
 }
 .password-field{
-  margin-top: 4px;
   margin-left: 49px;
   width: 300px;
   height: 40px;
@@ -92,16 +97,23 @@ font-family: 'Sofia Sans', sans-serif;
   font-size: 20px ;
 }
 .Submit-btn {
+  margin-top: 33px;
   background-color: rgb(17, 105, 227);
   border-radius: 12px;
   box-shadow: 0 9px rgb(78, 107, 222);
   width: 200px;
   height: 50px;
+  cursor: pointer;
+}
+.Submit-btn-text {
+  margin-top: 5px;
+  background-color: transparent;
   font-size: 28px;
   cursor: pointer;
   color: white;
   border: none;
   font-family: 'Cinzel', serif;
+
 }
 .Submit-btn:hover {
   box-shadow: 10px
