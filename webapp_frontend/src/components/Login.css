@@ -77,17 +77,6 @@ input:focus {
   width: 370px;
   color: white;
 }
-.password-label {
-  margin-inline: 16px;
-  margin-top: -22px;
-  line-height: 1;
-  font-weight: 40;
-  font-size: 18px;
-  color: #556274;
-  float:left;
-  text-align: left;
-  margin-bottom: 8px;
-}
 .password-field{
   margin-left: 49px;
   width: 300px;
