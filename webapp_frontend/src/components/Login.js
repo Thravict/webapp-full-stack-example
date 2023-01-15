@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Login.css"
 
 
@@ -14,17 +15,19 @@ function Login() {
             </div>
             <form action="#">
             <div className="email">
-            <label for="Email Address" className="email-label">Email Address</label>
-            <input className="email-field" type="email" autocomplete="on"></input>
+            <input className="email-field" type="email" autocomplete="on" placeholder="Email Adress"></input>
             </div>
             <div className="password">
-            <label for="Password" className="password-label">Password</label>
-            <input className="password-field" type="password"></input>
+            <input className="password-field" type="password" placeholder="Password"></input>
             </div>
             <div className="Submit-btn">
-              <button className="Submit-btn">
+              <button className="Submit-btn-text">
                 <span>Login</span>
               </button>
+            </div>
+            <div className="Signup-link">
+            <p>Not a member yet? 
+            <Link to="/signin">Create an account</Link></p>
             </div>
             </form>
           </div>
