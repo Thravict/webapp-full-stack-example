@@ -7,18 +7,32 @@ services:
       - TZ=Europe/Berlin
     volumes:
       - ./nginx/conf/webapp.conf:/etc/nginx/conf.d/webapp.conf
+      #- ./nginx/conf/pgadmin4.conf:/nginx/conf.d/pgadmin4.conf
     ports:
-      - 8080:8080
+      - 80:443
     networks:
       - nginx-net
+
+  pgadmin4:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin4
+    restart: always
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.admin
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - "5050:80"
+    networks:
+      - nginx-net
+      - db-net
 
   postgres:
     image: postgres:latest
     container_name: postgres_db
     restart: always
-    read_only: true
     volumes:
       - postgresql_data:/var/lib/postgresql/data
+      - ./postgres/schema.sql:/docker-entrypoint-initdb.d/schema.sql
     ports:
       - 5432:5432
     environment:
@@ -26,8 +40,8 @@ services:
       - POSTGRES_USER=dumbo
       - POSTGRES_PASSWORD=dumbo1234!
       - POSTGRES_DB=user_management
-    #networks:
-      #- db-net:
+    networks:
+      - db-net
 
 volumes:
   postgresql_data:
