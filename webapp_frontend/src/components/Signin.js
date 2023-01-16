@@ -3,51 +3,12 @@ import { Link } from "react-router-dom";
 
 
 function Signin() {
-  
-  const [email, setEmail] = useState(null)
-  const [password, setPassword] = useState(null)
-  const [confirmPassword,setConfirmPassword] = useState(null)
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if (password !== confirmPassword) {
-      setError(true)
-      return
-    }
-    console.log('email',email)
-    console.log('password',password)
-    console.log('confirmPassword',confirmPassword)
-
-  }
-    
-	return(
-	<html>
-        <body>
-          <h1 className="Signin-title">You are one step away from creating your Account</h1>
-          <div className="Signin-container">
-            
-            <div className="Signin-head">
-              <h1>Please create your Account</h1>
-            </div>
-            <form action="#">
-            <div className="email">
-            <label for="Email Address" className="email-label">Email Address</label>
-            <input className="email-field" type="email" autocomplete="on" placeholder="example@mail.com"></input>
-            </div>
-            <div className="password">
-            <label for="Password" className="password-label">Password</label>
-            <input className="password-field" type="password"></input>
-            </div>
-            <div className="Submit-btn">
-              <button className="Submit-btn-text">
-                <span>Create Account</span>
-              </button>
-            </div>
-            </form>
-          </div>
-        </body>
-    </html>
-)
-}
-
-export default Signin;
+  return (
+    <div>
+    <p>Welcome to your Page</p>
+    <Link to="/">Go back to Login</Link>
+    </div>
+    );
+    };
+    export default Signin; 
+	

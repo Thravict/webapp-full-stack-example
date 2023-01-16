@@ -1,6 +1,6 @@
 import { useState } from "react";
+import {Link} from "react-router-dom";
 import "./Login.css"
-import Signin from "./Signin";
 
 function Login() {
 
@@ -10,10 +10,12 @@ function Login() {
   
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (email !== )
-    console.log('email',email)
-    console.log('password',password)
-
+    //if (email !== Database entry) {
+    // setError (make sure account exists!)
+    //return
+  //}
+  console.log('email',email)
+  console.log('password',password)
   }
 
 	return(
@@ -27,20 +29,17 @@ function Login() {
             </div>
             <form onSubmit={handleSubmit}>
             <div className="email">
-            <input className="email-field" type="email" autocomplete="on" placeholder="Email Adress" onChange={(e) => setEmail(e.target.value)} />
+            <input className="email-field" type="email" autocomplete="on" placeholder="Email Adress" id="email" onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className="password">
-            <input className="password-field" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+            <input className="password-field" type="password" placeholder="Password" id="password" onChange={(e) => setPassword(e.target.value)} />
             </div>
             <div className="Submit-btn">
-              <input className="Submit-btn-text" type="submit">
-                <span>Login</span>
-              </input>
-              <p>{error}</p>
+                <input type="submit" className="Submit-btn-text" value="Login" ></input>
+                <p>{error}</p>
             </div>
             <div className="Signup-link">
-            <p>Not a member yet? 
-            <a href="/signin">Create an account</a></p>
+            <p>Not a member yet?</p>
             </div>
             </form>
           </div>

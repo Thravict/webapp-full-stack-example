@@ -1,13 +1,17 @@
-import {BrowserRouter as Router, Route, redirect }   from 'react-router-dom';  
-import Signin from "./components/Signin";
-import Home from "./components/Home";
+import { Switch, Route, BrowserRouter} from "react-router-dom";
 import Login from "./components/Login";
+import Signin from "./components/Signin"
 
 function App() {
   return (
-      <div>
-      <Login />
-      </div>
+    <div>
+      <BrowserRouter>
+      <Switch>
+        <Route path="/" component={ <Login/> } />
+        <Route path="about" component={ <Signin/> } />
+      </Switch>
+      </BrowserRouter>
+    </div>
   );
 }
 
