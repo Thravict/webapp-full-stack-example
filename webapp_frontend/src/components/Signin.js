@@ -3,6 +3,22 @@ import { Link } from "react-router-dom";
 
 
 function Signin() {
+  
+  const [email, setEmail] = useState(null)
+  const [password, setPassword] = useState(null)
+  const [confirmPassword,setConfirmPassword] = useState(null)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (password !== confirmPassword) {
+      setError(true)
+      return
+    }
+    console.log('email',email)
+    console.log('password',password)
+    console.log('confirmPassword',confirmPassword)
+
+  }
     
 	return(
 	<html>
