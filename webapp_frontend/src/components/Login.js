@@ -1,25 +1,36 @@
+import { Link } from "react-router-dom";
 import "./Login.css"
 
+
 function Login() {
+    
 	return(
 	<html>
         <body>
-            <div className="Login-container">
-                <div className="Login-head">
-                    <h1>Login</h1>
-                </div>
-                <div className="Login-form">
-                    <div className="username-field">
-                        <input type="email" className="username" placeholder="example@gmail.com"></input>
-                    </div>
-                    <div className="password-field">
-                        <input type="password" className="password"></input>
-                    </div>
-                </div>
-                <div className="Login-btn">
-
-                </div>
+          <h1 className="Login-title">Welcome to the Game Pass Portal</h1>
+          <div className="Login-container">
+            
+            <div className="Login-head">
+              <h1>Please enter your credentials</h1>
             </div>
+            <form action="#">
+            <div className="email">
+            <input className="email-field" type="email" autocomplete="on" placeholder="Email Adress"></input>
+            </div>
+            <div className="password">
+            <input className="password-field" type="password" placeholder="Password"></input>
+            </div>
+            <div className="Submit-btn">
+              <button className="Submit-btn-text">
+                <span>Login</span>
+              </button>
+            </div>
+            <div className="Signup-link">
+            <p>Not a member yet? 
+            <Link to="/signin">Create an account</Link></p>
+            </div>
+            </form>
+          </div>
         </body>
     </html>
 )
