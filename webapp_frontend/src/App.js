@@ -1,18 +1,12 @@
-import { Switch, Route, BrowserRouter} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import Login from "./components/Login";
-import Signin from "./components/Signin"
+import Signup from "./components/Signup";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <BrowserRouter>
-      <Switch>
-        <Route path="/" component={ <Login/> } />
-        <Route path="about" component={ <Signin/> } />
-      </Switch>
-      </BrowserRouter>
-    </div>
+    <Routes>
+      <Route path='/login' element={<Login/>} />
+      <Route path='/signup' element={<Signup/>}/>
+    </Routes>
   );
 }
-
-export default App;

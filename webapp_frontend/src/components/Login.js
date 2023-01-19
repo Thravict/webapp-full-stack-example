@@ -39,7 +39,9 @@ function Login() {
                 <p>{error}</p>
             </div>
             <div className="Signup-link">
-            <p>Not a member yet?</p>
+            <p>Not a member yet?
+            <Link to="/signup">Create an Account</Link>
+            </p>
             </div>
             </form>
           </div>
