@@ -21,7 +21,7 @@ function Login() {
 	return(
 	<html>
         <body>
-          <h1 className="Login-title">Welcome to the Game Pass Portal</h1>
+          <h1 className="Login-title">Welcome to JAMETO</h1>
           <div className="Login-container">
             
             <div className="Login-head">

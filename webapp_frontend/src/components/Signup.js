@@ -23,7 +23,7 @@ function Signup() {
 	return(
 	<html>
         <body>
-          <h1 className="Signup-title">CREATE YOUR ACCOUNT</h1>
+          <h1 className="Signup-title">JAMETO</h1>
           <div className="Signup-container">
             
             <div className="Signup-head">
