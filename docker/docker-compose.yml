@@ -25,6 +25,8 @@ services:
     networks:
       - nginx-net
       - db-net
+    volumes:
+      - ./pgadmin4/servers.json:/pgadmin4/servers.json
 
   postgres:
     image: postgres:latest
