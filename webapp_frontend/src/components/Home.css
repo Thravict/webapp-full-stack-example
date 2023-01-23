@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Cinzel:wght@600&family=Marcellus&display=swap');
+
+* {
+    justify-content:center ;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+  }
+body {
+    background: rgb(72,68,149);
+    background: linear-gradient(90deg, rgba(72,68,149,1) 0%, rgba(83,83,226,1) 25%, rgba(0,212,255,1) 81%);
+    font-family: 'Sofia Sans', sans-serif;
+    }
+.Home-title {
+    margin-top: 40px;
+    font-family: 'Cinzel', italic;
+    font-size: 50px;
+}
+.navbar {
+    margin-top: 20px;
+}
+.navbar-list {
+    background-color: blueviolet;
+}
+.navbar-list-home {
+    width: 100px;
+}
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #4CAF50;
+  }
