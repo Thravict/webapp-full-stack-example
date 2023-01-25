@@ -21,6 +21,20 @@ Außerdem wird das Backend benutzt um die JS / React Inhalte einfach mit der Dat
 Um ein Spring Boot Projekt initial zu erstellen wird maven als automatisierungstool benutzt.
 Dadurch werden alle dependencies hinzugefügt.
 
+Datenbank deployen und Spring starten:
+
+Zum deployen der Datenbank muss lediglich Docker(-Desktop) installiert sein.
+Wenn das geschehen ist, können die Container gestartet werden. Dafür ist bereits eine Konfigurationsdatei bereitgestellt, das docker-compose file.
+Um mit hilfe dessen die Container Umgebung zu starten, muss man folgende Schritte unternehmen:
+Commandline(Ausgang vom Projektordner)
+
+cd docker
+
+docker-compose up -d
+
+Außerdem muss das Backend gestartet werden. Dies kann je nach IDE in der Main Class gemacht werden. In dem Fall
+unseres Projektes: WebAppDatabase.java
+
 == Front-End
 
 Logo Quelle: https://logo-maker.freelogodesign.org/de?companyName=Jameto&_gl=1*zl079a*_ga*OTQxMjk2MTA3LjE2NzQ1MDM4MjA.*_ga_0PR6284HMM*MTY3NDUwMzgxOS4xLjAuMTY3NDUwMzgxOS42MC4wLjA.&category=23
