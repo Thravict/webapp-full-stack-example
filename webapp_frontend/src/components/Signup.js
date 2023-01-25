@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Popup from 'react-popup';
 import {Link} from "react-router-dom";
 import "./Signup.css"
 import Logo from "./assets/images/Jameto.jpg";
@@ -14,7 +13,7 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (password !== confirmPassword) {
-    Popup.alert("Passwords do not match!")
+    alert("Passwords do not match!")
     return
   }
   console.log('email',email)
@@ -31,7 +30,7 @@ function Signup() {
             </div>
             <form onSubmit={handleSubmit}>
             <div className="email">
-            <input className="email-field" type="email" autocomplete="on" placeholder="Email Adress" id="email" onChange={(e) => setEmail(e.target.value)} />
+            <input className="email-field" type="email" autoComplete="on" placeholder="Email Adress" id="email" onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div className="password">
             <input className="password-field" type="password" placeholder="Password" id="password" onChange={(e) => setPassword(e.target.value)} />
