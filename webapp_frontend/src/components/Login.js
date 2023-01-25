@@ -21,10 +21,8 @@ function Login() {
 
 	return(
 	<html>
-    <head>
-      <Logo/>
-      </head>
         <body>
+        <h2 className="head"><img src={Logo} className="logo"></img></h2>
           <h1 className="Login-title"></h1>
           <div className="Login-container">
             

@@ -24,9 +24,8 @@ function Signup() {
 	return(
 	<html>
         <body>
-          <h1 className="Signup-title">JAMETO</h1>
+          <h2 className="head"><img src={Logo} className="logo"></img></h2>
           <div className="Signup-container">
-            
             <div className="Signup-head">
               <h1>Account Creation</h1>
             </div>
