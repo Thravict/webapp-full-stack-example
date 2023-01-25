@@ -16,7 +16,7 @@ Warum:
 Unter Verwendung von Java kommt das Spring Boot Framework zum Einsatz.
 
 Dieses wird benutzt um einen Webserver (Apache Tomcat) out of the box mitgeliefert zu bekommen.
-Außerdem wird das Backend benutzt um die JS / React Inhalte zu implementieren.
+Außerdem wird das Backend benutzt um die JS / React Inhalte einfach mit der Datenbank kommunizieren zu lassen.
 
 Um ein Spring Boot Projekt initial zu erstellen wird maven als automatisierungstool benutzt.
 Dadurch werden alle dependencies hinzugefügt.
