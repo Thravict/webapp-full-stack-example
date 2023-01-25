@@ -7,15 +7,9 @@
     margin: auto;
   }
 body {
-    background: rgb(72,68,149);
-    background: linear-gradient(90deg, rgba(72,68,149,1) 0%, rgba(83,83,226,1) 25%, rgba(0,212,255,1) 81%);
+    background:rgb(77, 21, 208);
     font-family: 'Sofia Sans', sans-serif;
     }
-.Home-title {
-    margin-top: 40px;
-    font-family: 'Cinzel', italic;
-    font-size: 50px;
-}
 .navbar {
     margin-top: 20px;
 }

@@ -20,3 +20,9 @@ Außerdem wird das Backend benutzt um die JS / React Inhalte zu implementieren.
 
 Um ein Spring Boot Projekt initial zu erstellen wird maven als automatisierungstool benutzt.
 Dadurch werden alle dependencies hinzugefügt.
+
+== Front-End
+
+Logo Quelle: https://logo-maker.freelogodesign.org/de?companyName=Jameto&_gl=1*zl079a*_ga*OTQxMjk2MTA3LjE2NzQ1MDM4MjA.*_ga_0PR6284HMM*MTY3NDUwMzgxOS4xLjAuMTY3NDUwMzgxOS42MC4wLjA.&category=23
+
+Für das Front-End nutzten wir React.js, welches eine Javascript Bibliothek ist. Damit konnten wir unsere Webseite nach belieben gestalten und ein Script einfügen mit welchem die Webseite eine Kommunikation mit der Datenbank aufbaut.

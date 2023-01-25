@@ -2,18 +2,19 @@ import {Link} from "react-router-dom";
 import "./Home.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
+import Logo from "./assets/images/Jameto.jpg";
 
 function Home() {
 
 	return(
     <html>
       <body>
-        <div className="Home-title">
-          <h2>JAMETO</h2>
+        <div className="head">
+          <h2><img src={Logo}></img></h2>
         </div>
         <div className="navbar">
         <ul className="navbar-list">
-          <li className="navbar-list-home" ><Link to="/home">Home</Link></li>
+          <li className="navbar-list-home" ><Link to="/home"><i class={faHome}></i>Home</Link></li>
           <li className="navbar-list-profile"><Link to="/profile">Profile</Link></li>
           <li className="navbar-list-dashboard"><Link to="/dashboard">Dashboard</Link></li>
           <li className="navbar-list-settings"><Link to="/settings">Settings</Link></li>
@@ -34,9 +35,7 @@ function Home() {
         
         </body>
         </html>
-        
-        
-        
+
 )
 }
 

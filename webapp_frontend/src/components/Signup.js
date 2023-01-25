@@ -2,6 +2,7 @@ import { useState } from "react";
 import Popup from 'react-popup';
 import {Link} from "react-router-dom";
 import "./Signup.css"
+import Logo from "./assets/images/Jameto.jpg";
 
 function Signup() {
 

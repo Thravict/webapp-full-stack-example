@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {Link} from "react-router-dom";
 import "./Login.css"
+import Logo from "./assets/images/Jameto.jpg";
 
 function Login() {
 
@@ -20,8 +21,11 @@ function Login() {
 
 	return(
 	<html>
+    <head>
+      <Logo/>
+      </head>
         <body>
-          <h1 className="Login-title">JAMETO</h1>
+          <h1 className="Login-title"></h1>
           <div className="Login-container">
             
             <div className="Login-head">
@@ -39,7 +43,7 @@ function Login() {
                 <p>{error}</p>
             </div>
             <div className="Signup-link">
-            <p>Not a member yet?
+            <p>Not a member yet?&nbsp;&nbsp;
             <Link to="/signup">Create an Account</Link>
             </p>
             </div>
