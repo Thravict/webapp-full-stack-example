@@ -1,32 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Cinzel:wght@600&family=Marcellus&display=swap');
 
 * {
-    justify-content:center ;
+    justify-content: center;
     text-align: center;
     align-content: center;
     margin: auto;
-  }
-  .head {
+}
+
+.head {
     background-color: white;
-  }
-  .logo {
+}
+
+.logo {
     width: 200px;
     height: 100px;
-  }
+}
+
 body {
-    background:rgb(77, 21, 208);
+    background: rgb(77, 21, 208);
     font-family: 'Sofia Sans', sans-serif;
-    }
+}
+
 .navbar {
     background-color: blueviolet;
     height: 50px;
 }
+
 .navbar-list-home {
     width: 100px;
 }
 
-  
-  ul {
+
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -35,25 +40,25 @@ body {
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
-  }
-  
-  li {
-    list-style:none;
-    display:inline-block;
-  }
-  
-  li a {
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
     display: block;
     color: white;
     text-align: center;
     padding: 15px 20px 20px;
     text-decoration: none;
-  }
-  
-  li a:hover {
+}
+
+li a:hover {
     background-color: #111;
-  }
-  
-  .active {
+}
+
+.active {
     background-color: #4CAF50;
-  }
+}

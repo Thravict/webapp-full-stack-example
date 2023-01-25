@@ -1,57 +1,60 @@
-import { useState } from "react";
+import {useState} from "react";
 import {Link} from "react-router-dom";
 import "./Signup.css"
 import Logo from "./assets/images/Jameto.jpg";
 
 function Signup() {
 
-  const [email, setEmail] = useState(null)
-  const [password, setPassword] = useState(null)
-  const [confirmPassword, setConfirmPassword] = useState(null)
-  const [error, setError] = useState(false)
-  
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if (password !== confirmPassword) {
-    alert("Passwords do not match!")
-    return
-  }
-  console.log('email',email)
-  console.log('password',password)
-  }
+    const [email, setEmail] = useState(null)
+    const [password, setPassword] = useState(null)
+    const [confirmPassword, setConfirmPassword] = useState(null)
+    const [error, setError] = useState(false)
 
-	return(
-	<html>
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!")
+            return
+        }
+        console.log('email', email)
+        console.log('password', password)
+    }
+
+    return (
+        <html>
         <body>
-          <h2 className="head"><img src={Logo} className="logo"></img></h2>
-          <div className="Signup-container">
+        <h2 className="head"><img src={Logo} className="logo"></img></h2>
+        <div className="Signup-container">
             <div className="Signup-head">
-              <h1>Account Creation</h1>
+                <h1>Account Creation</h1>
             </div>
             <form onSubmit={handleSubmit}>
-            <div className="email">
-            <input className="email-field" type="email" autoComplete="on" placeholder="Email Adress" id="email" onChange={(e) => setEmail(e.target.value)} />
-            </div>
-            <div className="password">
-            <input className="password-field" type="password" placeholder="Password" id="password" onChange={(e) => setPassword(e.target.value)} />
-            </div>
-            <div className="password">
-            <input className="password-field" type="password" placeholder="Confirm Password" id="confirmPassword" onChange={(e) => setConfirmPassword(e.target.value)} />
-            </div>
-            <div className="Submit-btn">
-                <input type="submit" className="Submit-btn-text" value="Signup" ></input>
-                <p>{}</p>
-            </div>
-            <div className="Signup-link">
-            <p>Already a member?&nbsp;&nbsp;    
-            <Link to="/Login">Go to Login</Link>
-            </p>
-            </div>
+                <div className="email">
+                    <input className="email-field" type="email" autoComplete="on" placeholder="Email Adress" id="email"
+                           onChange={(e) => setEmail(e.target.value)}/>
+                </div>
+                <div className="password">
+                    <input className="password-field" type="password" placeholder="Password" id="password"
+                           onChange={(e) => setPassword(e.target.value)}/>
+                </div>
+                <div className="password">
+                    <input className="password-field" type="password" placeholder="Confirm Password"
+                           id="confirmPassword" onChange={(e) => setConfirmPassword(e.target.value)}/>
+                </div>
+                <div className="Submit-btn">
+                    <input type="submit" className="Submit-btn-text" value="Signup"></input>
+                    <p>{}</p>
+                </div>
+                <div className="Signup-link">
+                    <p>Already a member?&nbsp;&nbsp;
+                        <Link to="/Login">Go to Login</Link>
+                    </p>
+                </div>
             </form>
-          </div>
+        </div>
         </body>
-    </html>
-)
+        </html>
+    )
 }
 
 export default Signup;
