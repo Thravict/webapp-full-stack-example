@@ -4,8 +4,8 @@
       "Name": "Postgres",
       "Group": "Servers",
       "Port": 5432,
-      "Username": "Dumbo",
-      "Host": "localhost",
+      "Username": "dumbo",
+      "Host": "postgres_db",
       "SSLMode": "prefer",
       "MaintenanceDB": "postgres"
     }
