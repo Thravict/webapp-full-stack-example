@@ -28,5 +28,7 @@ Logo Quelle: https://logo-maker.freelogodesign.org/de?companyName=Jameto&_gl=1*z
 Für das Front-End nutzten wir React.js, welches eine Javascript Bibliothek ist. Damit konnten wir unsere Webseite nach belieben gestalten und ein Script einfügen mit welchem die Webseite eine Kommunikation mit der Datenbank aufbaut.
 
 Front-End starten:
+----
 cd Webapp_FrontEnd
 npm start
+----
