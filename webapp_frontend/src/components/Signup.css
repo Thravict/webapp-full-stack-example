@@ -24,7 +24,7 @@ body {
 
 .Signup-title {
     margin-top: 50px;
-    font-family: 'Cinzel', italic;
+    font-family: 'Cinzel', italic, serif;
     font-size: 60px;
 }
 
@@ -42,7 +42,7 @@ body {
 .Signup-head {
     padding: 15px;
     font-size: 15px;
-    font-family: 'Cinzel', italic;
+    font-family: 'Cinzel', italic, serif;
 }
 
 .email {
