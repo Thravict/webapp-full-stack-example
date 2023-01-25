@@ -17,6 +17,7 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault()
         if (() => emailAlreadyExists(email)) {
+            alert("HAAAAALT STOP")
             setError("make sure account exists!");
             return error;
         }
