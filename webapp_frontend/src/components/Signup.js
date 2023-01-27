@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {addApplicant} from "./ApiCalls/Applicant";
 import {Link} from "react-router-dom";
 import "./Signup.css"
 import Logo from "./assets/images/Jameto.jpg";
@@ -29,6 +30,7 @@ function Signup() {
         }
         console.log('email', email)
         console.log('password', password)
+
     }
 
     return (
