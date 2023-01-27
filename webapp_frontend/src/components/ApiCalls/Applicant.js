@@ -6,3 +6,13 @@ export const applicantExists = async (email) => {
     console.log(emailBool);
     return emailBool;
 }
+
+export const addApplicant = async (email, password) => {
+    const json = { "email": email, "password": password };
+    const registerParams = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(json)
+    }
+    await fetch(`${URL}`, registerParams).then(response => response.json());
+}
