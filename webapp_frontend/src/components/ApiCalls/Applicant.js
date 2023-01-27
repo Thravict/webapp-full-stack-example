@@ -11,7 +11,7 @@ export const addApplicant = async (email, password) => {
     const json = { "email": email, "password": password };
     const registerParams = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-type': 'application/json; charset=UTF-8' },
         body: JSON.stringify(json)
     }
     await fetch(`${URL}`, registerParams).then(response => response.json());

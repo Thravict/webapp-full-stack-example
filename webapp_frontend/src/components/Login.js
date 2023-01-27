@@ -1,8 +1,14 @@
+//React Hooks
 import {useState} from "react";
+// Routing
 import {Link} from "react-router-dom";
+//Imported components
 import {applicantExists} from "./ApiCalls/Applicant";
+//CSS File
 import "./Login.css"
+//Logo
 import Logo from "./assets/images/Jameto.jpg";
+//Icons
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAt, faKey} from "@fortawesome/free-solid-svg-icons";
 
