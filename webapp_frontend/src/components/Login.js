@@ -2,27 +2,20 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import "./Login.css"
 import Logo from "./assets/images/Jameto.jpg";
+import {applicantExists} from "./ApiCalls/Applicant";
 
 function Login() {
-
     const [email, setEmail] = useState()
     const [password, setPassword] = useState(null)
     const [error, setError] = useState(false)
-    const URL = "http://localhost:8080/api/v1/applicant/register/";
-    const emailAlreadyExists = async (Email) => {
-        return await fetch(`${URL}${Email}`, {method: 'POST', mode: 'no-cors'});
-    }
-
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (() => !emailAlreadyExists(email)) {
-            alert("HAAAAALT STOP")
+        if (!applicantExists(email)) {
+            alert(applicantExists(email))
             setError("make sure account exists!");
             return error;
         }
-        console.log('email', email)
-        console.log('password', password)
     }
 
     return (
