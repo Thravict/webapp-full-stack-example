@@ -2,18 +2,39 @@ import {useState} from "react";
 import {Link} from "react-router-dom";
 import "./Signup.css"
 import Logo from "./assets/images/Jameto.jpg";
+import validator from "validator";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAt, faKey} from "@fortawesome/free-solid-svg-icons";
 
 function Signup() {
 
-    const [email, setEmail] = useState(null)
-    const [password, setPassword] = useState(null)
-    const [confirmPassword, setConfirmPassword] = useState(null)
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
     const [error, setError] = useState(false)
+
+    const validateEmail = (e) => {
+        var email = e.target.value
+      
+        if (validator.isEmail(email)) {
+          setError('Valid Email!')
+        } else {
+          setError('Enter valid Email!')
+        }
+      }
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        if (email == "" || password == "" || confirmPassword == "") {
+            alert("Registration incomplete!")
+            return
+        }
         if (password !== confirmPassword) {
             alert("Passwords do not match!")
+            return
+        }
+        else {
+            alert("Thank you for registering!")
             return
         }
         console.log('email', email)
@@ -30,14 +51,18 @@ function Signup() {
             </div>
             <form onSubmit={handleSubmit}>
                 <div className="email">
-                    <input className="email-field" type="email" autoComplete="on" placeholder="Email Adress" id="email"
-                           onChange={(e) => setEmail(e.target.value)}/>
+                <FontAwesomeIcon icon={faAt} />&nbsp;
+                    <input className="email-field" autoComplete="on" placeholder="Email Adress" id="email"
+                           onChange={(e) => validateEmail(e) && setEmail(e.target.value)}/>
+                    <span className="email-error">{error}</span>
                 </div>
                 <div className="password">
+                <FontAwesomeIcon icon={faKey} />&nbsp;
                     <input className="password-field" type="password" placeholder="Password" id="password"
                            onChange={(e) => setPassword(e.target.value)}/>
                 </div>
                 <div className="password">
+                <FontAwesomeIcon icon={faKey} />&nbsp;
                     <input className="password-field" type="password" placeholder="Confirm Password"
                            id="confirmPassword" onChange={(e) => setConfirmPassword(e.target.value)}/>
                 </div>

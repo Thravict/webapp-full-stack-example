@@ -46,3 +46,7 @@ Front-End starten:
 cd Webapp_FrontEnd
 npm start
 ----
+
+Datenbank test 
+SpringBoot Debug
+Einträge API: http://localhost:8080/api/v1/applicant/register

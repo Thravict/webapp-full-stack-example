@@ -55,9 +55,9 @@ body {
 }
 
 .email-field {
-    margin-left: 49px;
-    margin-top: 4px;
-    width: 300px;
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 310px;
     height: 40px;
     border: none;
     border-bottom: 1px;
@@ -77,6 +77,10 @@ input:focus::-webkit-input-placeholder {
 input:focus {
     outline: none;
 }
+email-error {
+    font-weight: bold;
+    color: red;
+}
 
 .password {
     margin-top: 20px;
@@ -89,10 +93,10 @@ input:focus {
 }
 
 .password-field {
-    margin-left: 49px;
-    margin-top: 4px;
-    width: 300px;
-    height: 40px;
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 310px;
+    height: 39px;
     border: none;
     border-radius: 12px;
     font-size: 20px;

@@ -56,9 +56,9 @@ body {
 }
 
 .email-field {
-    margin-left: 49px;
-    margin-top: 4px;
-    width: 300px;
+    margin-left: 19px;
+    margin-top: 5px;
+    width: 310px;
     height: 40px;
     border: none;
     border-bottom: 1px;
@@ -90,7 +90,7 @@ input:focus {
 }
 
 .password-field {
-    margin-left: 49px;
+    margin-left: 29px;
     margin-top: 4px;
     width: 300px;
     height: 40px;
