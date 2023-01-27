@@ -40,7 +40,7 @@ body {
 }
 
 .Signup-head {
-    padding: 15px;
+    padding: 20px;
     font-size: 15px;
     font-family: 'Cinzel', italic, serif;
 }
@@ -52,6 +52,7 @@ body {
     height: 50px;
     width: 380px;
     color: white;
+    margin-bottom: 35px;
 }
 
 .email-field {
@@ -77,11 +78,6 @@ input:focus::-webkit-input-placeholder {
 input:focus {
     outline: none;
 }
-email-error {
-    font-weight: bold;
-    color: red;
-}
-
 .password {
     margin-top: 20px;
     font-size: 20px;

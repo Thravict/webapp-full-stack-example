@@ -13,16 +13,6 @@ function Signup() {
     const [confirmPassword, setConfirmPassword] = useState("")
     const [error, setError] = useState(false)
 
-    const validateEmail = (e) => {
-        var email = e.target.value
-      
-        if (validator.isEmail(email)) {
-          setError('Valid Email!')
-        } else {
-          setError('Enter valid Email!')
-        }
-      }
-
     const handleSubmit = (e) => {
         e.preventDefault()
         if (email == "" || password == "" || confirmPassword == "") {
@@ -54,7 +44,7 @@ function Signup() {
                 <FontAwesomeIcon icon={faAt} />&nbsp;
                     <input className="email-field" autoComplete="on" placeholder="Email Adress" id="email"
                            onChange={(e) => validateEmail(e) && setEmail(e.target.value)}/>
-                    <span className="email-error">{error}</span>
+                    <p className="email-error">{error}</p>
                 </div>
                 <div className="password">
                 <FontAwesomeIcon icon={faKey} />&nbsp;
