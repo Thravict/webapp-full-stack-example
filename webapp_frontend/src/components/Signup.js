@@ -1,7 +1,7 @@
 //React Hooks
-import {useState} from "react";
+import {useState, useEffect} from "react";
 //Routing
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 //Imported components
 import {addApplicant} from "./ApiCalls/Applicant";
 //CSS File
@@ -14,27 +14,9 @@ import {faAt, faKey} from "@fortawesome/free-solid-svg-icons";
 
 function Signup() {
 
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [confirmPassword, setConfirmPassword] = useState("")
-
-    const submit = (e) => {
-        e.preventDefault(addApplicant)
-        if (email == "" || password == "" || confirmPassword == "") {
-            alert("Registration incomplete!")
-            return
-        }
-        if (password !== confirmPassword) {
-            alert("Passwords do not match!")
-            return
-        }
-        else {
-            alert("Thank you for registering!")
-            return 
-        }
-
-
-    }
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
 
     return (
         <body>
@@ -46,14 +28,16 @@ function Signup() {
             <div className="Signup-head">
                 <h1>Account Creation</h1>
             </div>
-            <form onSubmit={submit}>
+            <form>
                 <div className="email">
                 <FontAwesomeIcon icon={faAt}/>&nbsp;
                     <input 
                     className="email-field" 
+                    type="text"
                     autoComplete="on" 
                     placeholder="Email Adress" 
                     id="email"
+                    /* Event handler: cache input */
                     onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
@@ -78,11 +62,10 @@ function Signup() {
                     />
                 </div>
                 <div className="Submit-btn">
-                    <input 
-                    type="submit" 
+                    <button  
                     className="Submit-btn-text" 
-                    value="Signup"
-                    />
+                    > Signup
+                    </button>
                 </div>
                 <div className="Signup-link">
                     <p>Already a member?&nbsp;&nbsp;
