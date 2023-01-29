@@ -8,11 +8,15 @@ export const applicantExists = async (email) => {
 }
 
 export const addApplicant = async (email, password) => {
-    const json = { "email": email, "password": password };
+    const json = {email, password };
     const registerParams = {
+        mode: 'no-cors',
         method: 'POST',
-        headers: { 'Content-type': 'application/json; charset=UTF-8' },
+        headers: { 
+            'Content-type': 'application/json',
+        },
         body: JSON.stringify(json)
     }
-    await fetch(`${URL}`, registerParams).then(response => response.json());
+    await fetch(URL, registerParams)
+    .then((response) => response.json());
 }

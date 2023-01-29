@@ -6,8 +6,8 @@ import {Link} from "react-router-dom";
 import {applicantExists} from "./ApiCalls/Applicant";
 //CSS File
 import "./Login.css"
-//Logo
-import Logo from "./assets/images/Jameto.jpg";
+//Logo Banner
+import Logo from "./Logo";
 //Icons
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAt, faKey} from "@fortawesome/free-solid-svg-icons";
@@ -30,12 +30,9 @@ function Login() {
     }
 
     return (
-        <html>
         <body>
-        <h2 className="head"><img src={Logo} className="logo"></img></h2>
-        <h1 className="Login-title"></h1>
+        <Logo></Logo>
         <div className="Login-container">
-
             <div className="Login-head">
                 <h1>Please enter your credentials</h1>
             </div>
@@ -62,7 +59,6 @@ function Login() {
             </form>
         </div>
         </body>
-        </html>
     )
 }
 

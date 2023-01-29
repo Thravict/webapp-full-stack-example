@@ -7,15 +7,6 @@
     margin: auto;
 }
 
-.head {
-    background-color: white;
-}
-
-.logo {
-    width: 200px;
-    height: 100px;
-}
-
 body {
     background: rgb(77, 21, 208);
     font-family: 'Sofia Sans', sans-serif;

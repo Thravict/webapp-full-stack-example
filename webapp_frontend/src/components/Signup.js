@@ -1,14 +1,13 @@
-//React Hooks
-import {useState, useEffect} from "react";
-//Routing
-import {Link, useNavigate} from "react-router-dom";
-//Imported components
+import {useState} from "react";
+
+import {Link} from "react-router-dom";
+
 import {addApplicant} from "./ApiCalls/Applicant";
-//CSS File
+
 import "./Signup.css"
-//Logo Banner
-import Logo from "./assets/images/Jameto.jpg";
-//Icons
+
+import Logo from "./Logo";
+
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAt, faKey} from "@fortawesome/free-solid-svg-icons";
 
@@ -16,19 +15,23 @@ function Signup() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
+
+    const register = (e) => {
+        e.preventDefault();
+        addApplicant(
+            email, 
+            password
+            );
+     }; 
 
     return (
         <body>
-         <h2 className="head">
-            <img src={Logo} className="logo">
-            </img>
-         </h2>
+         <Logo></Logo>
          <div className="Signup-container">
             <div className="Signup-head">
                 <h1>Account Creation</h1>
             </div>
-            <form>
+            <form onSubmit={register}>
                 <div className="email">
                 <FontAwesomeIcon icon={faAt}/>&nbsp;
                     <input 
@@ -58,13 +61,12 @@ function Signup() {
                     type="password" 
                     placeholder="Confirm Password"
                     id="confirmPassword" 
-                    onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                 </div>
                 <div className="Submit-btn">
                     <button  
-                    className="Submit-btn-text" 
-                    > Signup
+                    className="Submit-btn-text"> 
+                    Signup
                     </button>
                 </div>
                 <div className="Signup-link">

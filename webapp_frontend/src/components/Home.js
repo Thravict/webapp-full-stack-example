@@ -2,14 +2,14 @@ import {Link} from "react-router-dom";
 import "./Home.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHome, faCircleUser, faGear, faBars, faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
-import Logo from "./assets/images/Jameto.jpg";
+//Logo Banner
+import Logo from "./Logo";
 
 function Home() {
 
     return (
-        <html>
         <body>
-        <h2 className="head"><img src={Logo} className="logo"></img></h2>
+        <Logo></Logo>
         <ul className="navbar">
             <li className="navbar-list-home">
             <Link to="/home">
@@ -44,8 +44,6 @@ function Home() {
         </ul>
 
         </body>
-        </html>
-
     )
 }
 

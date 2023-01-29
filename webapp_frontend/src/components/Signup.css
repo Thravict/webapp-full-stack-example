@@ -8,25 +8,10 @@
     
 }
 
-.head {
-    background-color: white;
-}
-
-.logo {
-    width: 200px;
-    height: 100px;
-}
-
 body {
     background: rgb(72, 68, 149);
     background: linear-gradient(90deg, rgba(72, 68, 149, 1) 0%, rgba(83, 83, 226, 1) 25%, rgba(0, 212, 255, 1) 81%);
     font-family: 'Sofia Sans', sans-serif;
-}
-
-.Signup-title {
-    margin-top: 50px;
-    font-family: 'Cinzel', italic, serif;
-    font-size: 60px;
 }
 
 .Signup-container {
