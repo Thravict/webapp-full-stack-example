@@ -14,9 +14,14 @@ export const addApplicant = async (email, password) => {
         method: 'POST',
         headers: { 
             'Content-type': 'application/json',
+            'Accept': 'application/json'
         },
         body: JSON.stringify(json)
     }
     await fetch(URL, registerParams)
-    .then((response) => response.json());
+    .then(res => res.json())
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((err) => console.error(err));
 }

@@ -18,10 +18,7 @@ function Signup() {
 
     const register = (e) => {
         e.preventDefault();
-        addApplicant(
-            email, 
-            password
-            );
+        addApplicant(email, password);
      }; 
 
     return (
@@ -40,6 +37,8 @@ function Signup() {
                     autoComplete="on" 
                     placeholder="Email Adress" 
                     id="email"
+                    value={email}
+                    required
                     /* Event handler: cache input */
                     onChange={(e) => setEmail(e.target.value)}
                     />
@@ -49,8 +48,11 @@ function Signup() {
                     <input 
                     className="password-field" 
                     type="password" 
+                    autoComplete="on" 
                     placeholder="Password" 
                     id="password"
+                    value={password}
+                    required
                     onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
@@ -59,18 +61,20 @@ function Signup() {
                     <input 
                     className="password-field" 
                     type="password" 
+                    autoComplete="on" 
                     placeholder="Confirm Password"
-                    id="confirmPassword" 
+                    id="confirmPassword"
+                    required 
                     />
                 </div>
                 <div className="Submit-btn">
                     <button  
                     className="Submit-btn-text"> 
-                    Signup
+                    SIGN IN
                     </button>
                 </div>
                 <div className="Signup-link">
-                    <p>Already a member?&nbsp;&nbsp;
+                    <p>Already a member?{" "}
                         <Link 
                         to="/Login">
                         Go to Login
