@@ -2,10 +2,11 @@ const URL = "api/v1/applicant/register";
 
 
 export const applicantExists = async (email) => {
-    const emailResponse = await fetch(`${URL}${email}`, {method: 'POST', mode: 'no-cors'});
-    const emailBool = await emailResponse.attachment("f.txt");
-    console.log(emailBool);
-    return emailBool;
+    const apiresbool = await fetch(URL + "/" +  email)
+        .then((existsResponse) => {
+            console.log(existsResponse)
+        });
+    return apiresbool.headersSent;
 }
 
 export const addApplicant = async (email, password) => {
