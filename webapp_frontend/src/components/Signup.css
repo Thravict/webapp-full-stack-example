@@ -17,7 +17,7 @@ body {
 .Signup-container {
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    box-shadow: 10px 5px 5px rgb(3, 0, 0);
+    box-shadow: 0px 0px 15px 10px rgb(91, 104, 127);
     width: 400px;
     height: 400px;
     margin-top: 80px;
@@ -65,7 +65,7 @@ input:focus {
     outline: none;
 }
 .password {
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 20px;
     background-color: rgb(92, 87, 87);
     border-radius: 20px;
@@ -87,8 +87,8 @@ input:focus {
 .Submit-btn {
     margin-top: 20px;
     background-color: rgb(1, 58, 137);
-    border-radius: 12px;
-    box-shadow: 0 9px rgb(9, 10, 14);
+    border-radius: 20px;
+    box-shadow: 0 5px rgb(53, 59, 82);
     width: 200px;
     height: 50px;
     cursor: pointer;
@@ -107,12 +107,12 @@ input:focus {
 }
 
 .Submit-btn:hover {
-    box-shadow: black;
+    box-shadow: rgb(248, 248, 248);
 }
 
 .Submit-btn:active {
-    box-shadow: 0 5px rgb(52, 46, 46);
-    transform: translateY(4px);
+    box-shadow: 0 0px rgb(52, 46, 46);
+    transform: translateY(2px);
 }
 
 .Signup-link {
