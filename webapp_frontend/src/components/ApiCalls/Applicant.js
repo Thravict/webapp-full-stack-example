@@ -1,19 +1,19 @@
 const URL = "api/v1/applicant/register";
 
+export function applicantExistence(email) {
+    fetch(URL + "/" +  email, {
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => response.text()).then(text => console.log(text));
 
-export const applicantExists = async (email) => {
-    const apiresbool = await fetch(URL + "/" +  email)
-        .then((existsResponse) => {
-            console.log(existsResponse)
-        });
-    return apiresbool.headersSent;
 }
 
 export const addApplicant = async (email, password) => {
     const json = {email, password };
     await fetch(URL, {
         method: 'POST',
-        headers: { 
+        headers: {
             'Content-type': 'application/json',
             'Accept': 'application/json'
         },
@@ -24,6 +24,4 @@ export const addApplicant = async (email, password) => {
             console.log("Go to Login")
         }
     });
-    
-   
 }

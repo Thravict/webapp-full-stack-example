@@ -3,7 +3,7 @@ import {useState} from "react";
 // Routing
 import {Link} from "react-router-dom";
 //Imported components
-import {applicantExists} from "./ApiCalls/Applicant";
+import { applicantExistence } from "./ApiCalls/Applicant";
 //CSS File
 import "./Login.css"
 //Logo Banner
@@ -18,16 +18,11 @@ function Login() {
     const [password, setPassword] = useState(null)
     const [error, setError] = useState(false)
 
-    const handleSubmit = (e, applicantEmail) => {
-        e.preventDefault()
-        const exists = applicantExists(applicantEmail)
-        if (exists) {
-        } else {
-            alert("Applicant doesnt exist")
-            setError("make sure account exists!");
-            return error;
-        }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        applicantExistence(email);
     }
+
 
     return (
         <body>
@@ -36,7 +31,7 @@ function Login() {
             <div className="Login-head">
                 <h1>Please enter your credentials</h1>
             </div>
-            <form onSubmit={() => handleSubmit("", email)}>
+            <form onSubmit={handleSubmit}>
                 <div className="email">
                     <FontAwesomeIcon icon={faAt}/>&nbsp;
                     <input className="email-field" type="email" autoComplete="on" placeholder="Email Adress" id="email"
@@ -61,5 +56,4 @@ function Login() {
         </body>
     )
 }
-
 export default Login;
