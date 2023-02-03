@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 import {addApplicant} from "./ApiCalls/Applicant";
 
@@ -15,11 +15,21 @@ function Signup() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [toLogin, setLogin] = useState(false);
+
+    const navigate = useNavigate();
 
     const register = (e) => {
+        /* prevent page refresh */
         e.preventDefault();
         addApplicant(email, password);
+        setLogin (true);
+        /* navigate('/login') */
         };
+
+    if (toLogin === true) {
+        navigate('/login');
+    }
 
     return (
         <body>
@@ -28,7 +38,7 @@ function Signup() {
             <div className="Signup-head">
                 <h1>Account Creation</h1>
             </div>
-            <form onSubmit={register}>
+            <form>
                 <div className="email">
                 <FontAwesomeIcon icon={faAt}/>&nbsp;
                     <input 
@@ -68,9 +78,10 @@ function Signup() {
                     />
                 </div>
                 <div className="Submit-btn">
-                    <button  
+                    <button 
+                    onClick={register}
                     className="Submit-btn-text"> 
-                    SIGN IN
+                    SIGN UP
                     </button>
                 </div>
                 <div className="Signup-link">

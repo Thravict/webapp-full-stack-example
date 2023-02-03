@@ -21,7 +21,6 @@ export const addApplicant = async (email, password) => {
         console.log("New User added")
         if (response.status === 200) {
             console.log("Go to Login")
-            
         }
     });
     
