@@ -1,4 +1,5 @@
-const URL = "http://localhost:8080/api/v1/applicant/register/";
+const URL = "api/v1/applicant/register";
+
 
 export const applicantExists = async (email) => {
     const emailResponse = await fetch(`${URL}${email}`, {method: 'POST', mode: 'no-cors'});
@@ -9,19 +10,20 @@ export const applicantExists = async (email) => {
 
 export const addApplicant = async (email, password) => {
     const json = {email, password };
-    const registerParams = {
-        mode: 'no-cors',
+    await fetch(URL, {
         method: 'POST',
         headers: { 
             'Content-type': 'application/json',
             'Accept': 'application/json'
         },
         body: JSON.stringify(json)
-    }
-    await fetch(URL, registerParams)
-    .then(res => res.json())
-    .then((data) => {
-        console.log(data);
-    })
-    .catch((err) => console.error(err));
+    }).then((response) => {
+        console.log("New User added")
+        if (response.status === 200) {
+            console.log("Go to Login")
+            
+        }
+    });
+    
+   
 }

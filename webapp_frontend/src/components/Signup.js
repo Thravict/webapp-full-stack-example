@@ -19,7 +19,7 @@ function Signup() {
     const register = (e) => {
         e.preventDefault();
         addApplicant(email, password);
-     }; 
+        };
 
     return (
         <body>
