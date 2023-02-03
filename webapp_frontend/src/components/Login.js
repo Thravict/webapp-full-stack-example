@@ -1,7 +1,7 @@
 //React Hooks
 import {useState} from "react";
 // Routing
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 //Imported components
 import { applicantExistence } from "./ApiCalls/Applicant";
 //CSS File
@@ -14,13 +14,18 @@ import {faAt, faKey} from "@fortawesome/free-solid-svg-icons";
 
 function Login() {
 
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState(null)
-    const [error, setError] = useState(false)
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [toHome, setHome] = useState(false);
+
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         applicantExistence(email);
+        if (applicantExistence === true) {
+            navigate('/home');
+        }
     }
 
 
@@ -44,7 +49,6 @@ function Login() {
                 </div>
                 <div className="Submit-btn">
                     <input type="submit" className="Submit-btn-text" value="Login"></input>
-                    <p>{error}</p>
                 </div>
                 <div className="Signup-link">
                     <p>Don´t have an account?{" "}
