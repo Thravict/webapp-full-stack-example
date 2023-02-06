@@ -1,13 +1,14 @@
+//React Hooks
 import {useState} from "react";
-
+//Routing
 import {Link, useNavigate} from "react-router-dom";
-
+//Imported components
 import {addApplicant} from "./ApiCalls/Applicant";
-
+//CSS
 import "./Signup.css"
-
+//Logo Banner
 import Logo from "./Logo";
-
+//Icons
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAt, faKey} from "@fortawesome/free-solid-svg-icons";
 
@@ -15,6 +16,7 @@ function Signup() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [toLogin, setLogin] = useState(false);
 
     const navigate = useNavigate();
@@ -23,7 +25,14 @@ function Signup() {
         /* prevent page refresh */
         e.preventDefault();
         addApplicant(email, password);
-        setLogin (true);
+        if (email && password && confirmPassword !== "") {
+            setLogin (true);
+        } else if (password !== confirmPassword){
+            alert("Passwords do not match!")
+        } else {
+            alert("Enter your credentials!")
+        }
+        
         /* navigate('/login') */
         };
 
@@ -48,7 +57,6 @@ function Signup() {
                     placeholder="Email Adress" 
                     id="email"
                     value={email}
-                    required
                     /* Event handler: cache input */
                     onChange={(e) => setEmail(e.target.value)}
                     />
@@ -62,7 +70,6 @@ function Signup() {
                     placeholder="Password" 
                     id="password"
                     value={password}
-                    required
                     onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
@@ -74,7 +81,7 @@ function Signup() {
                     autoComplete="on" 
                     placeholder="Confirm Password"
                     id="confirmPassword"
-                    required 
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                 </div>
                 <div className="Submit-btn">
