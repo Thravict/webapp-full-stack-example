@@ -17,28 +17,22 @@ function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [toLogin, setLogin] = useState(false);
 
     const navigate = useNavigate();
 
     const register = (e) => {
         /* prevent page refresh */
         e.preventDefault();
-        addApplicant(email, password);
-        if (email && password && confirmPassword !== "") {
-            setLogin (true);
+        if ((email && password && confirmPassword !== "") && password == confirmPassword ) {
+            addApplicant(email, password);
+            alert("Account has been created")
+            alert("You will be redirected to Login")
+            navigate('/login');
         } else if (password !== confirmPassword){
             alert("Passwords do not match!")
         } else {
             alert("Enter your credentials!")
-        }
-        
-        /* navigate('/login') */
-        };
-
-    if (toLogin === true) {
-        navigate('/login');
-    }
+        }};
 
     return (
         <body>
