@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Cinzel:wght@600&family=Marcellus&display=swap');
+
+* {
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}
+
+body {
+    background: rgb(77, 21, 208);
+    font-family: 'Sofia Sans', sans-serif;
+}
