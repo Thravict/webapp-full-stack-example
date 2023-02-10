@@ -1,7 +1,10 @@
 import {Routes, Route} from "react-router-dom";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
-import Home from "./components/Home";
+import Login from "./components/auth/Login";
+import Signup from "./components/auth/Signup";
+import Dashboard from "./components/HomePages/Dashboard";
+import Home from "./components/HomePages/Home";
+import Profile from "./components/HomePages/Profile";
+import Settings from "./components/HomePages/Settings";
 
 export default function App() {
     return (
@@ -10,6 +13,9 @@ export default function App() {
             <Route path='/' element={<Login/>}/>
             <Route path='/signup' element={<Signup/>}/>
             <Route path='/home' element={<Home/>}/>
+            <Route path='/profile' element={<Profile/>}/>
+            <Route path='/dashboard' element={<Dashboard/>}/>
+            <Route path='/settings' element={<Settings/>}/>
         </Routes>
     );
 }

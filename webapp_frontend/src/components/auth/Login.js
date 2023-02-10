@@ -8,6 +8,8 @@ import { applicantExistence } from "../ApiCalls/Applicant";
 import "./Login.css"
 //Logo Banner
 import Logo from "../Logo";
+//Footer
+import Footer from "../Footer"
 //Icons
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAt, faKey} from "@fortawesome/free-solid-svg-icons";
@@ -73,6 +75,7 @@ function Login() {
                 </div>
             </form>
         </div>
+        <Footer></Footer>
         </body>
     )
 }

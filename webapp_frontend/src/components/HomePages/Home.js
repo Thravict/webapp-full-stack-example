@@ -10,7 +10,6 @@ function Home() {
         <Logo></Logo>
         <Navbar></Navbar>
         <div>
-            Test
         </div>
         </body>
     )
