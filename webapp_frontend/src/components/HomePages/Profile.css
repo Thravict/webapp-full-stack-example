@@ -3,5 +3,33 @@
     border-radius: 10px;
     height: 100px;
     width: 70%;
-    margin-top: 100px;
+    margin-top: 30px;
+    text-align: center;
+}
+.Posts {
+    font-size: 30px;
+    color: rgba(90, 87, 87, 0.998);
+    margin: 15px;
+}
+.Likes {
+    font-size: 30px;
+    color: rgba(90, 87, 87, 0.998);
+    background-color: white;
+}
+.Follower {
+    font-size: 30px;
+    color: rgba(90, 87, 87, 0.998);
+    background-color: white;
+}
+.AboutMe {
+    background-color: white;
+    border-radius: 10px;
+    height: 100px;
+    width: 70%;
+    margin-top: 40px;
+}
+.AboutTitle {
+    margin-top: 60px;
+    font-size: 30px;
+    margin-right: 70%;
 }

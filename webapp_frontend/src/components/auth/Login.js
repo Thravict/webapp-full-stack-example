@@ -3,7 +3,7 @@ import {useState} from "react";
 // Routing
 import {Link, useNavigate} from "react-router-dom";
 //Imported components
-import { applicantExistence } from "../ApiCalls/Applicant";
+
 //CSS File
 import "./Login.css"
 //Logo Banner
@@ -18,13 +18,31 @@ function Login() {
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [toHome, setHome] = useState(false);
+
+    const URL = "api/v1/applicant/register";
 
     const navigate = useNavigate();
+    function CheckApplicant() {
 
+            fetch(URL + "/" +  email, {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.text())
+            .then(text => {
+                if (text === "true") {
+                    alert("Login successful");
+                    navigate(`/home`)
+                } else {
+                    alert("Wrong E-Mail");
+                }
+            });
+        
+        }
     const handleSubmit = (e) => {
         e.preventDefault();
-        applicantExistence(email);
+        CheckApplicant(email)
     }
 
 

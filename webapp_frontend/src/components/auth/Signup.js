@@ -3,7 +3,7 @@ import {useState} from "react";
 //Routing
 import {Link, useNavigate} from "react-router-dom";
 //Imported components
-import {addApplicant} from "../ApiCalls/Applicant";
+import {addApplicant} from "../ApiCalls/addApplicant";
 //CSS
 import "./Signup.css"
 //Logo Banner
@@ -19,10 +19,29 @@ function Signup() {
     const [confirmPassword, setConfirmPassword] = useState("");
 
     const navigate = useNavigate();
+    const URL = "api/v1/applicant/register";
+
+    async function CheckApplicant(email) {
+
+            await fetch(URL + "/" +  email, {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.status === 500) {
+                    alert("E-Mail is already is use!");
+                    
+                } else {
+                    return
+                }
+            });
+        }
 
     const register = (e) => {
         /* prevent page refresh */
         e.preventDefault();
+        CheckApplicant(email);
         if ((email && password && confirmPassword !== "") && password == confirmPassword ) {
             addApplicant(email, password);
             alert("Account has been created")
