@@ -2,13 +2,18 @@
 const Footer = () => {
 
     return (
-        <h2 
+        <h4 
         style={{
             Color:"white",
             backgroundColor:"black",
+            position:"fixed",
+            height:"30px",
+            width:"100%",
+            color:"white",
+            marginTop:"15%",
         }}>
-        © 2023 Jameto
-        </h2>
+        Copyright © 2023 Jameto
+        </h4>
     )
 }
 
