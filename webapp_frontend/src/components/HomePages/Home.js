@@ -2,6 +2,8 @@ import "./Home.css"
 //Logo Banner
 import Logo from "../Logo";
 import Navbar from "./Navbar";
+//Footer
+import Footer from "../Footer"
 
 function Home() {
 
@@ -11,6 +13,7 @@ function Home() {
         <Navbar></Navbar>
         <div>
         </div>
+        <Footer></Footer>
         </body>
     )
 }

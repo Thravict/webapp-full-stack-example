@@ -3,6 +3,8 @@ import "./Profile.css"
 import Logo from "../Logo";
 import Navbar from "./Navbar";
 import ProfileHeader from "./ProfileHeader";
+//Footer
+import Footer from "../Footer"
 
 function Profile() {
 
@@ -41,6 +43,7 @@ function Profile() {
             <p>Gaming</p>
             <p>Living in Germany</p>
         </div>
+        <Footer></Footer>
         </body>
     )
 }
