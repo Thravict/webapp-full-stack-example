@@ -5,11 +5,15 @@ import "./Navbar.css"
 //Icons
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHome, faCircleUser, faGear, faBars, faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
+import Logo from "../Logo";
 
 const Navbar = () => {
 
     return (
-        <ul className="navbar">
+        <body>
+        <div className="navbar-container">
+        <ul>
+            <li><Logo></Logo></li>
             <li className="navbar-list-home">
             <Link to="/home">
             <FontAwesomeIcon icon={faHome} />&nbsp;
@@ -41,6 +45,8 @@ const Navbar = () => {
             </Link>
             </li>
         </ul>
+        </div>
+        </body>
     )
 }
 

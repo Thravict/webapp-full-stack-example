@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Cinzel:wght@600&family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
 * {
     justify-content: center;
@@ -6,40 +6,30 @@
     align-content: center;
     margin: auto;
 }
-
 body {
-    background: rgb(72, 68, 149);
-    background: linear-gradient(90deg, rgba(72, 68, 149, 1) 0%, rgba(83, 83, 226, 1) 25%, rgba(0, 212, 255, 1) 81%);
-    font-family: 'Sofia Sans', sans-serif;
+    background: linear-gradient(90deg, #91f4de ,#3A86FF, #5efff7);
 }
-
-.Login-title {
-    margin-top: 50px;
-    font-family: 'Cinzel', italic, serif;
-    font-size: 60px;
-}
-
 .Login-container {
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    box-shadow: 10px 5px 5px rgb(3, 0, 0);
+    border-radius: 48px;
+    background: linear-gradient(145deg, #5190f4, #3074d3);
+    box-shadow:  25px 25px 50px #0e3e75,
+                 -25px -25px 50px #92c7ed;
     width: 400px;
     height: 400px;
-    margin-top: 40px;
+    margin-top: 90px;
     padding: 15px;
-    margin-bottom: 60px;
 }
 
 .Login-head {
     padding: 25px;
     font-size: 15px;
-    font-family: 'Cinzel', italic, serif;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 .email {
     margin: 10px;
     font-size: 20px;
-    background-color: rgb(68, 62, 62);
     border-radius: 20px;
     height: 50px;
     width: 380px;
@@ -73,7 +63,6 @@ input:focus {
 .password {
     margin-top: 30px;
     font-size: 20px;
-    background-color: rgb(92, 87, 87);
     border-radius: 20px;
     height: 50px;
     width: 380px;
@@ -86,41 +75,95 @@ input:focus {
     width: 300px;
     height: 40px;
     border: none;
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: 20px;
 }
-
-.Submit-btn {
-    margin-top: 20px;
-    background-color: rgb(1, 58, 137);
-    border-radius: 12px;
-    box-shadow: 0 9px rgb(9, 10, 14);
-    width: 200px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.Submit-btn-text {
-    margin-top: 8px;
-    background-color: transparent;
-    font-size: 25px;
-    cursor: pointer;
-    color: white;
-    border: none;
-    font-family: 'Cinzel', serif;
-    margin-left: 8px;
-
-}
-
-.Submit-btn:hover {
-    box-shadow: black;
-}
-
-.Submit-btn:active {
-    box-shadow: 0 5px rgb(52, 46, 46);
-    transform: translateY(4px);
-}
-
 .Signup-link {
     margin-top: 35px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
+button {
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    position: relative;
+    font-size: 30px;
+    background: #ffffff;
+    border: none;
+    color: #fff;
+    margin-top: 30px;
+  }
+  
+  button:hover {
+    letter-spacing: 0.25em;
+    background: #ffffff;
+    color: #FCEFF9;
+    -webkit-box-shadow: 0 0 45px #188bff;
+            box-shadow: 0 0 45px #0b53b9;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #3A86FF;
+  }
+  
+  button span {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+    cursor: pointer;
+  }
+  
+  button i::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #0943e2;
+    width: 7px;
+    height: 4px;
+    top: -3.5px;
+    left: 80%;
+    background: #ffffff;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  button:hover i::before {
+    width: 20px;
+    left: 20%;
+    
+  }
+  
+  button i::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #0fab46;
+    width: 7px;
+    height: 4px;
+    bottom: -3.5px;
+    left: 20%;
+    background: #ffffff;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  button:hover i::after {
+    width: 20px;
+    left: 80%;
+  }

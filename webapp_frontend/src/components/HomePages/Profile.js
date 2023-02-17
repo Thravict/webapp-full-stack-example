@@ -1,6 +1,5 @@
 import "./Profile.css"
 //Logo Banner
-import Logo from "../Logo";
 import Navbar from "./Navbar";
 import ProfileHeader from "./ProfileHeader";
 //Footer
@@ -11,7 +10,6 @@ function Profile() {
     return (
         <body>
         <div>
-        <Logo></Logo>
         <Navbar></Navbar>
         </div>
         <div>
