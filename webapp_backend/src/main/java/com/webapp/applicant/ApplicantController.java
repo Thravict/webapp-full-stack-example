@@ -16,10 +16,15 @@ public class ApplicantController {
         applicantService.setApplicant(applicant);
     }
 
-    @GetMapping("register/{applicantEmail}")
+    @GetMapping("register/mail/{applicantEmail}")
     public Boolean sendSingleApplicant(@PathVariable("applicantEmail") String applicantEmail) {
         return applicantService.getApplicantExistence(applicantEmail);
-     }
+    }
+
+    @GetMapping("register/pass/{applicantPassword}")
+    public Boolean sendSingleApplicantPassword(@PathVariable("applicantPassword") String applicantPassword) {
+        return applicantService.getApplicantExistenceByPassword(applicantPassword);
+    }
 
     @GetMapping("register")
     public List<Applicant> listAllApplicants() {

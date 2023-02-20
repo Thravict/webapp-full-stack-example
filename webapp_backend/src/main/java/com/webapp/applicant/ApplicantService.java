@@ -28,4 +28,7 @@ public class ApplicantService {
     public Boolean getApplicantExistence(String applicantEmail) {
         return applicantRepository.findApplicantByEmail(applicantEmail).isPresent();
     }
+    public Boolean getApplicantExistenceByPassword(String applicantPassword) {
+        return applicantRepository.findApplicantByPassword(applicantPassword).isPresent();
+    }
 }
