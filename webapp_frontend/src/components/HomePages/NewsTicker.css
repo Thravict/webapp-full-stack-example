@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,400;1,900&display=swap');
+
+.NewsTicker-body {
+    font-family: 'Roboto', sans-serif;
+}
+.news-container {
+    position: relative;
+    margin: auto;
+    padding-top: 0px;
+}
+.title {
+    display: block;
+    position: absolute;
+    font-style: italic;
+    font-size: 25px;
+    background: #000000;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    z-index: 2;
+}
+.title::after,
+.title::before{
+    content: '';
+    width: 0;
+    position: absolute;
+    border-width: 68px;
+    border-top-right-radius: solid;
+    top: 0;
+    z-index: -1; 
+}
+.title::before{
+    border-color: #0d0d0d transparent transparent transparent;
+    right: -78px;
+}
+.text-animation {
+    height: 50px;
+    background: #3a85ff1c;
+    overflow: hidden;
+    position: relative;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    left: 180px;
+}
+.text-animation p{
+    position: absolute;
+    width: 90%;
+    margin: 0;
+    font-weight: 700;
+    text-align: left;
+
+    transform: translateX(100%);
+    animation: moving 15s linear infinite;
+}
+@keyframes moving {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
