@@ -10,7 +10,7 @@ public class Applicant {
     private Long id;
     @Column(nullable = false, unique = true)
     private String email;
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String password;
 
     public Applicant(Long id, String email, String password) {
