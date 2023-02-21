@@ -53,3 +53,32 @@ npm start
 Datenbank test 
 SpringBoot Debug
 Einträge API: http://localhost:8080/api/v1/applicant/register
+
+Im Webapp_FrontEnd: 
+package.json: proxy auf http://webapp_backend:8080 ändern
+docker build -f(ile) .\dockerfile -t(arget) webapp_frontend/webapp_frontend:latest .
+=> Docker image wird erstellt
+
+docker save webapp_frontend/webapp_frontend:latest -o(utput) webapp_frontend.tar
+=> tar für Frontend erstellen
+
+application.properties: spring.datasource.url ändern zu postgres_db
+Java Applikation erstellen:
+Maven Webapp_BackEnd: clean bis install
+=> .jar wird erstellt 
+docker build -f(ile) .\dockerfile -t(arget) webapp_backend/webapp_backend:latest .
+=> Docker image wird erstellt
+
+docker save webapp_backend/webapp_backend:latest -o(utput) webapp_backend.tar
+=> tar für Backend erstellen
+
+=> zwei Images für zwei Container (dritter Container enthält nginx.conf)
+
+scp .\webapp_frontend\webapp_frontend.tar .\webapp_backend\webapp_backend.tar .\docker\nginx\conf\webapp.conf .\docker\docker-compose.yml user@10.0.211.194:/home/user/
+=> ssh copy secure: zwei .tar, nginx.conf und docker-compose wird auf VM kopiert in den User Home folder
+
+ssh user@10.0.211.194
+
+sudo docker load --input ./webapp_frontend.tar (gleiche bei ./webapp_backend.tar)
+docker-compose up -d
+
