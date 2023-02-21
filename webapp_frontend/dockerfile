@@ -1,0 +1,21 @@
+# ==== CONFIGURE =====
+# Use a Node LTS base image
+FROM node:19.6.0
+# Set the working directory to /internal-service-portal inside the container
+WORKDIR /webapp_db
+# Copy app files
+COPY . .
+# ==== BUILD =====
+# Install dependencies (npm ci makes sure the exact versions in the lockfile gets installed)
+RUN npm ci --force
+# Build the app
+RUN npm run build
+# ==== RUN =======
+# Set the env to "production"
+ENV NODE_ENV production
+# Expose the port on which the app will be running (3000 is the default that `serve` uses)
+EXPOSE 3000
+# Start the app
+CMD [ "npx", "serve", "build" ]
+# Reminder. This Container is very inefficient because all dependencies are loaded. So the output size of the Image
+# can go up to 1,3 GB. Much too big for a Webserver!
