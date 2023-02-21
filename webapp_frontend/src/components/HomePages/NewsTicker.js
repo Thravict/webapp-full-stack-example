@@ -9,8 +9,7 @@ function Settings() {
                 Breaking News
             </div>
             <div className="text-animation">
-            <p> Apple TV releases trailer to 'Tetris' streaming March 31. </p>
-            <p>Hogwarts Legacy has no plans for DLC - Big Loss? </p>
+            <p> Apple TV releases trailer to 'Tetris' streaming March 31. Hogwarts Legacy has no plans for DLC - Big Loss? </p>
             </div>
         </div>
         </body>

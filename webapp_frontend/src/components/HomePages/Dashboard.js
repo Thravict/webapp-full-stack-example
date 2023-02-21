@@ -1,4 +1,3 @@
-import "./Dashboard.css"
 //Logo Banner
 import Navbar from "./Navbar";
 //Footer
@@ -9,9 +8,6 @@ function Dashboard() {
     return (
         <body>
         <Navbar></Navbar>
-        <div>
-            Test
-        </div>
         <Footer></Footer>
         </body>
     )

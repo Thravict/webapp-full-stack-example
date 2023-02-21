@@ -6,6 +6,7 @@ import "./Navbar.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHome, faCircleUser, faGear, faBars, faArrowUpRightFromSquare} from "@fortawesome/free-solid-svg-icons";
 import Logo from "../Logo";
+import NewsTicker from "./NewsTicker";
 
 const Navbar = () => {
 
@@ -46,6 +47,7 @@ const Navbar = () => {
             </li>
         </ul>
         </div>
+        <NewsTicker/>
         </body>
     )
 }

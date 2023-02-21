@@ -10,5 +10,24 @@
 body {
     font-family: 'Sofia Sans', sans-serif;
 }
-
+.Carousel {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.Series {
+    background-color: black;
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    position: fixed;
+}
+.Slider-Title {
+    color: white;
+    text-transform: uppercase;
+    position: fixed;
+    margin-top: 150px;
+    margin-left: 20px;
+    font-family: 'Cinzel';
+    font-size: 60px;
+}
 

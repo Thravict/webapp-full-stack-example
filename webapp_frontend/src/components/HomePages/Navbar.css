@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
 .navbar-container {
     position: relative;
     background-color: #ffffff;
@@ -23,7 +26,8 @@ li a {
     text-align: center;
     padding: 5px 18px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Montserrat';
 }
 
 li a:hover {

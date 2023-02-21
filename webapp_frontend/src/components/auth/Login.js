@@ -20,25 +20,36 @@ function Login() {
     const navigate = useNavigate();
     function CheckApplicant() {
 
-            fetch(URL + "/" +  email, {
+            fetch(URL + "/mail/" +  email, {
                 headers: {
                     'Accept': 'application/json'
                 }
             })
             .then(response => response.text())
             .then(text => {
-                if (text === "true") {
+                if (text !== "true") {
+                    alert("Wrong E-mail")
+                } 
+            })
+            .then(fetch(URL + "/pass/" +  password, {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => response.text())
+            .then(text => {
+                if (text !== "true") {
+                    alert("Wrong Password");
+                } else {
                     alert("Login successful");
                     navigate(`/home`)
-                } else {
-                    alert("Wrong E-Mail");
                 }
-            });
+            }));
         
         }
     const handleSubmit = (e) => {
         e.preventDefault();
-        CheckApplicant(email)
+        CheckApplicant()
     }
 
 

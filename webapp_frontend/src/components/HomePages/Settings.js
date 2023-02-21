@@ -1,4 +1,3 @@
-import "./Settings.css"
 //Logo Banner
 import Navbar from "./Navbar";
 //Footer
