@@ -44,8 +44,8 @@ services:
     image: webapp_frontend/webapp_frontend:latest
     container_name: webapp_frontend
     restart: always
-    ports:
-      - 3000:3000
+    expose:
+      - 3000
     networks:
       - nginx-net
       - app-net
