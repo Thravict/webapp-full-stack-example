@@ -26,6 +26,11 @@ public class ApplicantController {
         return applicantService.getApplicantExistenceByPassword(applicantPassword);
     }
 
+    @GetMapping("register/cred/{applicantEmail}/{applicantPassword}")
+    public Boolean sendCredentialCheckBoolean(@PathVariable("applicantEmail") String applicantEmail,
+                                              @PathVariable("applicantPassword") String applicantPassword) {
+        return applicantService.checkCredentialsByEmailAndPassword(applicantEmail, applicantPassword);
+    }
     @GetMapping("register")
     public List<Applicant> listAllApplicants() {
         return applicantService.getAllApplicants();
