@@ -15,38 +15,32 @@ function Login() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    const URL = "api/v1/applicant/register";
+    const urls = [
+        "api/v1/applicant/register/mail/" + email,
+        "api/v1/applicant/register/pass/" + password,
+    ]
 
     const navigate = useNavigate();
-    function CheckApplicant() {
+    let checkUser = []
+    const CheckApplicant = async () => {
+        try {
+            const response = await Promise.all(
+                urls.map(url => fetch (url)
+                .then(res => res.text())
+                .then(text => {
+                    checkUser.push(text)
+                    console.log(checkUser)
+                    if (checkUser[0] === "true" && checkUser[1] === "true") {
+                        alert("Login successful")
+                        navigate('/home')
+                    } 
+                })
+                ))
+            console.log(response)
+        } catch (error) {
+            console.log("Error", error)
+        }}
 
-            fetch(URL + "/mail/" +  email, {
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => response.text())
-            .then(text => {
-                if (text !== "true") {
-                    alert("Wrong E-mail")
-                } 
-            })
-            .then(fetch(URL + "/pass/" +  password, {
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => response.text())
-            .then(text => {
-                if (text !== "true") {
-                    alert("Wrong Password");
-                } else {
-                    alert("Login successful");
-                    navigate(`/home`)
-                }
-            }));
-        
-        }
     const handleSubmit = (e) => {
         e.preventDefault();
         CheckApplicant()
