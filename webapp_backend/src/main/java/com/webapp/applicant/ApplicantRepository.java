@@ -9,7 +9,5 @@ public interface ApplicantRepository extends JpaRepository<Applicant, Long> {
 
     Optional<Applicant> findApplicantByEmail(String applicantEmail);
 
-    Optional<Applicant> findApplicantByPassword(String applicantPassword);
-
     Optional<Applicant> findApplicantByEmailAndPassword(String applicantEmail, String applicantPassword);
 }
