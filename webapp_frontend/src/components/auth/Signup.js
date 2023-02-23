@@ -17,24 +17,33 @@ function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [newUser, setNewUser] = useState(false);
 
     const navigate = useNavigate();
     const URL = "api/v1/applicant/register";
 
-    async function CheckApplicant(email) {
+    async function CheckApplicant() {
 
-            await fetch(URL + "/" +  email, {
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.status === 500) {
+            await fetch(URL + "/mail/" +  email)
+            .then(res => res.text())
+            .then(text => {
+                switch (text) {
+                    case 'true':
                     alert("E-Mail is already is use!");
-                    
-                } else {
-                    return
+                    break;
+                    default:
+                        if ((email && password && confirmPassword !== "") && password == confirmPassword) {
+                            addApplicant(email, password);
+                            alert("Account has been created")
+                            alert("You will be redirected to Login")
+                            navigate('/login') 
+                        } else if (password !== confirmPassword){
+                            alert("Passwords do not match!")
+                        } else {
+                            alert("Enter your credentials!")
+                        };
                 }
+                
             });
         }
 
@@ -42,17 +51,7 @@ function Signup() {
         /* prevent page refresh */
         e.preventDefault();
         CheckApplicant(email);
-        if ((email && password && confirmPassword !== "") && password == confirmPassword ) {
-            addApplicant(email, password);
-            alert("Account has been created")
-            alert("You will be redirected to Login")
-            navigate('/login');
-        } else if (password !== confirmPassword){
-            alert("Passwords do not match!")
-        } else {
-            alert("Enter your credentials!")
-        }};
-
+    };
     return (
         <body>
          <div className="Signup-container">

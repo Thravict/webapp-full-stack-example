@@ -17,7 +17,7 @@ function Login() {
 
     const urls = [
         "api/v1/applicant/register/mail/" + email,
-        "api/v1/applicant/register/pass/" + password,
+        "api/v1/applicant/register/cred/" + email + "/" + password,
     ]
 
     const navigate = useNavigate();
@@ -33,7 +33,9 @@ function Login() {
                     if (checkUser[0] === "true" && checkUser[1] === "true") {
                         alert("Login successful")
                         navigate('/home')
-                    } 
+                    } else {
+                        alert("Wrong credentials")
+                    }
                 })
                 ))
             console.log(response)
