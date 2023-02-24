@@ -30,11 +30,22 @@ function Login() {
                 .then(text => {
                     checkUser.push(text)
                     console.log(checkUser)
-                    if (checkUser[0] === "true" && checkUser[1] === "true") {
-                        alert("Login successful")
-                        navigate('/home')
-                    } else {
-                        alert("Wrong credentials")
+                    switch (checkUser[0] && checkUser[1]) {
+                        case '': 
+                            alert("Please enter your E-Mail")
+                            break;
+                        case 'false':
+                            alert("Wrong credentials")
+                            break;
+                        case 'true':
+                            switch (checkUser[1]) {
+                                case 'false':
+                                    alert("Wrong credentials")
+                                    break;
+                                case 'true':
+                                    alert("Login successful")
+                                    navigate('/home')
+                            }
                     }
                 })
                 ))
