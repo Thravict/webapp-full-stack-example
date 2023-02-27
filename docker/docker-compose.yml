@@ -30,30 +30,20 @@ services:
       - POSTGRES_DB=user_management
     networks:
       - db-net
-  webapp_backend:
-    image: webapp_backend/webapp_backend:latest
-    container_name: webapp_backend
+  webapp:
+    image: webapp/webapp:latest
+    container_name: webapp
     restart: always
     expose:
       - 8080
     networks:
       - db-net
-      - app-net
-
-  webapp_frontend:
-    image: webapp_frontend/webapp_frontend:latest
-    container_name: webapp_frontend
-    restart: always
-    expose:
-      - 3000
-    networks:
       - nginx-net
-      - app-net
+
 volumes:
   postgresql_data:
     driver: local
 
 networks:
-  app-net:
   nginx-net: #Only Connection between React Application and Nginx
   db-net: #Only Connection between Spring Application and Postgres
