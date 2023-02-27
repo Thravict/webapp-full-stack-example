@@ -20,7 +20,7 @@
 
     <modules>
         <module>Webapp_FrontEnd</module>
-        <module>Webapp_BackEnd</module>
+        <module>Webapp_Full</module>
     </modules>
 
 </project>

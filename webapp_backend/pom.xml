@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Webapp_BackEnd</artifactId>
+    <artifactId>Webapp_Full</artifactId>
     <version>0.1-SNAPSHOT</version>
-    <name>Webapp_BackEnd</name>
+    <name>Webapp_Full</name>
 
     <parent>
         <groupId>Webapp_Application</groupId>
