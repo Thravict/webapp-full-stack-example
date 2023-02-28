@@ -3,8 +3,6 @@ import "./Home.css"
 import Navbar from "./Navbar";
 //Footer
 import Footer from "../Footer"
-import SeriesSlider from "../HomePages/SeriesSlider";
-import MovieSlider from "../HomePages/MovieSlider";
 
 function Home() {
 
