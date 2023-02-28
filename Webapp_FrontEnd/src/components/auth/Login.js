@@ -30,9 +30,9 @@ function Login() {
                 .then(text => {
                     checkUser.push(text)
                     console.log(checkUser)
-                    switch (checkUser[0] && checkUser[1]) {
+                    switch (checkUser[0]) {
                         case '': 
-                            alert("Please enter your E-Mail")
+                            alert("Please check your email entry")
                             break;
                         case 'false':
                             alert("Wrong credentials")
