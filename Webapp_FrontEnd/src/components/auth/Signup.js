@@ -17,7 +17,6 @@ function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [newUser, setNewUser] = useState(false);
 
     const navigate = useNavigate();
     const URL = "api/v1/applicant/register";
@@ -32,7 +31,7 @@ function Signup() {
                     alert("E-Mail is already is use!");
                     break;
                     default:
-                        if ((email && password && confirmPassword !== "") && password == confirmPassword) {
+                        if ((email && password && confirmPassword !== "") && password === confirmPassword) {
                             addApplicant(email, password);
                             alert("Account has been created")
                             alert("You will be redirected to Login")
