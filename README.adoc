@@ -1,12 +1,8 @@
 = Webapp_Database
 
-== Dokumentation
-
-Dies ist eine Dokumentation für die Projektarbeit Webapp_Database. 
-
 == Projektmitglieder (Contributors)
 
-Melanie Gille, Jakob Friedrich, Tobias Lux
+Melanie Gille, Jakob Friedrich
 
 == Projektbeschreibung
 
